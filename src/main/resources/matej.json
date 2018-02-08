@@ -1,0 +1,49 @@
+{
+  "uuid": "c49139c5-b654-45fd-b96c-540df9300800",
+  "name": "Matej's Room",
+  "remote_access": {
+    "slug": "matej-room",
+    "password": "kormuth"
+  },
+  "sensors": [
+    {
+      "uuid": "f41316ca-5492-4943-a8ba-bb9857359959",
+      "name": "MAX44009",
+      "description": "Senzor svetla, ktory este neviem kam dam.",
+      "class": "eu.matejkormuth.smartlajt.sensors.MAX44009",
+      "update_interval": 1000,
+      "params": {
+        "i2c_address": 74,
+        "integration_time": 800
+      }
+    },
+    {
+      "uuid": "54f64c57-c450-4545-88d8-93aa4016f330",
+      "name": "My Android Presence Sensor",
+      "description": "Kontroluje ci je moj telefon na WIFI.",
+      "class": "eu.matejkormuth.smartlajt.sensors.NetworkDevicePresenceSensor",
+      "update_interval": 1000,
+      "params": {
+        "ip_address": "192.168.0.20",
+        "mac_address": "CA-0C-09-EE-79-D3"
+      }
+    }
+  ],
+  "devices": [
+    {
+      "uuid": "136e70fe-9cd3-4f35-8714-0ffe8438ade0",
+      "name": "Default Light",
+      "description": "Dva desynchronizovane led pasiky.",
+      "class": "eu.matejkormuth.smartlajt.devices.MyLedLight"
+    },
+    {
+      "uuid": "304c94c7-0a98-406e-83da-9797b08e4f17",
+      "name": "My Desktop",
+      "description": "It always wants to restart and apply updates.",
+      "class": "eu.matejkormuth.smartlajt.devices.Computer",
+      "params": {
+        "ip_address": "192.168.0.1"
+      }
+    }
+  ]
+}

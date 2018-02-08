@@ -1,0 +1,4 @@
+@ParametersAreNonnullByDefault
+package eu.matejkormuth.smartlajt;
+
+import javax.annotation.ParametersAreNonnullByDefault;
